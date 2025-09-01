@@ -1,0 +1,40 @@
+﻿@page
+@model FinanceManager.Pages.IndexModel
+@{
+    ViewData["Title"] = "Panel Principal";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Mis Transacciones</h1>
+</div>
+
+<table class="table table-striped table-hover mt-4">
+    <thead>
+        <tr>
+            <th>Descripcion</th>
+            <th>Monto</th>
+            <th>Categoria</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Transactions != null && Model.Transactions.Any())
+        {
+            foreach (var tx in Model.Transactions)
+            {
+                <tr>
+                    <td>@tx.Description</td>
+                    <td>@tx.Amount.ToString("C")</td> <!-- "C" formatea como moneda -->
+                    <td>@tx.Category</td>
+                    <td>@tx.TransactionDate.ToShortDateString()</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4" class="text-center">No hay transacciones disponibles.</td>
+            </tr>
+        }
+    </tbody>
+</table>

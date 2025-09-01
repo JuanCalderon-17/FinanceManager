@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "FinanceManagerFrontEnd/1.0.0": {
+        "runtime": {
+          "FinanceManagerFrontEnd.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FinanceManagerFrontEnd/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
