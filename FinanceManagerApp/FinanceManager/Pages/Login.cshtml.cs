@@ -18,7 +18,7 @@ namespace FinanceManager.Pages.Account
 {
     public class LoginModel : PageModel
     {
-        // El "experto" que nos da acceso al telÈfono para llamar a la API
+        // El "experto" que nos da acceso al tel√©fono para llamar a la API
         private readonly IHttpClientFactory _httpClientFactory;
 
         public LoginModel(IHttpClientFactory httpClientFactory)
@@ -26,36 +26,35 @@ namespace FinanceManager.Pages.Account
             _httpClientFactory = httpClientFactory;
         }
 
-        // El "portapapeles" donde se guardar·n los datos del formulario
+        // El "portapapeles" donde se guardar√°n los datos del formulario
         [BindProperty]
         public InputModel Input { get; set; }
-
-        // Propiedad para mostrar mensajes de error en la p·gina
+        // Propiedad para mostrar mensajes de error en la p√°gina
         [TempData]
         public string ErrorMessage { get; set; }
 
-        // La definiciÛn de nuestro "portapapeles"
+        // La definici√≥n de nuestro "portapapeles"
         public class InputModel
         {
             [Required(ErrorMessage = "El nombre de usuario es obligatorio.")]
             public string Username { get; set; }
 
-            [Required(ErrorMessage = "La contraseÒa es obligatoria.")]
+            [Required(ErrorMessage = "La contrase√±a es obligatoria.")]
             [DataType(DataType.Password)]
             public string Password { get; set; }
         }
 
         public void OnGet() { }
 
-        // El mÈtodo que se ejecuta cuando el usuario envÌa el formulario
+        // El m√©todo que se ejecuta cuando el usuario env√≠a el formulario
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
-                return Page(); // Si el formulario est· mal, lo mostramos de nuevo
+                return Page(); // Si el formulario est√° mal, lo mostramos de nuevo
             }
 
-            // 1. Tomamos el telÈfono
+            // 1. Tomamos el tel√©fono
             var client = _httpClientFactory.CreateClient("api");
 
             // 2. Preparamos el mensaje en formato JSON
@@ -84,13 +83,13 @@ namespace FinanceManager.Pages.Account
                 };
                 Response.Cookies.Append("jwtToken", userDto.Token, cookieOptions);
 
-                // Finalmente, enviamos al usuario a la p·gina principal
+                // Finalmente, enviamos al usuario a la p√°gina principal
                 return RedirectToPage("/Index");
             }
             else
             {
-                // Si fallÛ, mostramos un error
-                ErrorMessage = "Usuario o contraseÒa incorrectos.";
+                // Si fall√≥, mostramos un error
+                ErrorMessage = "Usuario o contrase√±a incorrectos.";
                 return Page();
             }
         }
