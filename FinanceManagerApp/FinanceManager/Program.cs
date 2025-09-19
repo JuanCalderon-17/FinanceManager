@@ -32,13 +32,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-// Creo un HttpClient para llamar a la API externa, y configuro la dirección base para no tener que repetirla en cada llamada
+// Creo un HttpClient para llamar a la API externa, y configuro la direcciÃ³n base para no tener que repetirla en cada llamada
 builder.Services.AddHttpClient("api", client=>
 {
     client.BaseAddress = new Uri("https://localhost:7133");
 });
-
-
 
 var app = builder.Build();
 
