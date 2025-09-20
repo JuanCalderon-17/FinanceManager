@@ -544,10 +544,10 @@ C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManage
 C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\FinanceM.12F9E200.Up2Date
 C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\FinanceManager.API.dll
 C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\refint\FinanceManager.API.dll
 C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\FinanceManager.API.pdb
 C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\FinanceManager.API.genruntimeconfig.cache
 C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\ref\FinanceManager.API.dll
+C:\Users\juanc\OneDrive\practiceProgramming\APIs\FinanceManagerApp\FinanceManager.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

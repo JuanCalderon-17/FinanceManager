@@ -48,7 +48,21 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 // 4. Registro de nuestro servicio de tokens
 builder.Services.AddScoped<ITokenService, TokenService>();
 
-// 5. Configuración de Swagger para que entienda JWT
+
+// 5. Le damos permiso a nuestra app de Angular para que hable con la API
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200") // La dirección de nuestra app de Angular
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
+
+// 6. Configuración de Swagger para que entienda JWT
 builder.Services.AddSwaggerGen(options =>
 {
     // Definimos el esquema de seguridad "Bearer"
@@ -79,6 +93,11 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
+
+
+
+
+
 
 // --- FIN DE NUESTRO CÓDIGO DE CONFIGURACIÓN ---
 

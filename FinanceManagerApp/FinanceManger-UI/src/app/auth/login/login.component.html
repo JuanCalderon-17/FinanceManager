@@ -1,0 +1,41 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold text-center text-gray-800">Iniciar Sesión</h2>
+
+    <!-- El (ngSubmit) activa el método login() en nuestro "cerebro" -->
+    <form (ngSubmit)="login()" #loginForm="ngForm" class="space-y-6">
+
+      <div>
+        <label for="username" class="text-sm font-medium text-gray-700">Usuario</label>
+        <!-- El [(ngModel)] conecta este campo con la variable 'username' en nuestro "cerebro" -->
+        <input type="text"
+               id="username"
+               name="username"
+               [(ngModel)]="model.username"
+               required
+               class="w-full px-4 py-2 mt-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+      </div>
+
+      <div>
+        <label for="password" class="text-sm font-medium text-gray-700">Contraseña</label>
+        <input type="password"
+               id="password"
+               name="password"
+               [(ngModel)]="model.password"
+               required
+               class="w-full px-4 py-2 mt-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+      </div>
+
+      <div>
+        <button type="submit"
+                [disabled]="!loginForm.form.valid"
+                class="w-full py-2 text-white font-semibold bg-blue-600 rounded-md hover:bg-blue-700 disabled:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+          Iniciar Sesión
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+
