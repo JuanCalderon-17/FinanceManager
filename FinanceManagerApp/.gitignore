@@ -1,0 +1,23 @@
+# Node.js
+node_modules/
+dist/
+.angular/
+.env
+npm-debug.log
+
+# Angular build artifacts
+*.js.map
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Sistema
+Thumbs.db
+.DS_Store
