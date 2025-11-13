@@ -1,0 +1,27 @@
+<div class="container">
+  <form #loginForm="ngForm" (ngSubmit)="login()">
+    <h2>Login</h2>
+
+    <div>
+      <label for="username">Username</label>
+      <input type="text"
+             id="username"
+             name="username"
+             [(ngModel)]="model.username"
+             required />
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input type="password"
+             id="password"
+             name="password"
+             [(ngModel)]="model.password"
+             required />
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <pre>{{ model | json }}</pre>
+</div>

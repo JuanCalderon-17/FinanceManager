@@ -1,0 +1,42 @@
+<div class="container">
+    <form #registerForm="ngForm" (ngSubmit)="register()">
+        <h2>Register</h2>
+    
+        <div>
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                [(ngModel)]="model.username"
+                required
+            />
+        </div>
+
+        <div>
+        <label for="email">Email</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="model.email"
+            required
+        />
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                [(ngModel)]="model.password"
+                required
+            />
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+        
+    <pre>{{ model | json }}</pre>
+</div>
